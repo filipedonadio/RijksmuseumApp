@@ -28,6 +28,7 @@
 		5AEC71822A100A550020AC17 /* CollectionEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71802A100A550020AC17 /* CollectionEndpoint.swift */; };
 		5AEC718A2A100F580020AC17 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5AEC71892A100F580020AC17 /* Kingfisher */; };
 		5AEC71942A1012120020AC17 /* ItemTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71932A1012120020AC17 /* ItemTile.swift */; };
+		5AEC71982A101BAE0020AC17 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71972A101BAE0020AC17 /* MenuBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		5AEC717F2A100A550020AC17 /* CollectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionService.swift; sourceTree = "<group>"; };
 		5AEC71802A100A550020AC17 /* CollectionEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionEndpoint.swift; sourceTree = "<group>"; };
 		5AEC71932A1012120020AC17 /* ItemTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTile.swift; sourceTree = "<group>"; };
+		5AEC71972A101BAE0020AC17 /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				5AEC71932A1012120020AC17 /* ItemTile.swift */,
+				5AEC71972A101BAE0020AC17 /* MenuBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				5AEC71792A1007C60020AC17 /* CollectionObject.swift in Sources */,
 				5AE010502A1003EE003664B3 /* RijksmuseumApp.swift in Sources */,
 				5AEC71942A1012120020AC17 /* ItemTile.swift in Sources */,
+				5AEC71982A101BAE0020AC17 /* MenuBar.swift in Sources */,
 				5AEC71662A1005F30020AC17 /* Endpoint.swift in Sources */,
 				5AEC71712A1007A50020AC17 /* Dating.swift in Sources */,
 				5AEC717B2A1007CE0020AC17 /* CollectionObjectType.swift in Sources */,
