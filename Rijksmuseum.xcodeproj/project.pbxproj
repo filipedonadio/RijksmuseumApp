@@ -12,6 +12,9 @@
 		5AE010542A1003F0003664B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE010532A1003F0003664B3 /* Assets.xcassets */; };
 		5AE010572A1003F0003664B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE010562A1003F0003664B3 /* Preview Assets.xcassets */; };
 		5AEC71632A1004DD0020AC17 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71622A1004DD0020AC17 /* Color.swift */; };
+		5AEC71662A1005F30020AC17 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71652A1005F30020AC17 /* Endpoint.swift */; };
+		5AEC71682A1006030020AC17 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71672A1006030020AC17 /* RequestError.swift */; };
+		5AEC716A2A1006130020AC17 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71692A1006130020AC17 /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		5AE010532A1003F0003664B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AE010562A1003F0003664B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5AEC71622A1004DD0020AC17 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		5AEC71652A1005F30020AC17 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		5AEC71672A1006030020AC17 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		5AEC71692A1006130020AC17 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 		5AE0104E2A1003EE003664B3 /* Rijksmuseum */ = {
 			isa = PBXGroup;
 			children = (
+				5AEC71642A1005E40020AC17 /* Networking */,
 				5AEC71612A1004D00020AC17 /* Extensions */,
 				5AE0104F2A1003EE003664B3 /* RijksmuseumApp.swift */,
 				5AE010512A1003EE003664B3 /* ContentView.swift */,
@@ -76,6 +83,16 @@
 				5AEC71622A1004DD0020AC17 /* Color.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5AEC71642A1005E40020AC17 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5AEC71652A1005F30020AC17 /* Endpoint.swift */,
+				5AEC71672A1006030020AC17 /* RequestError.swift */,
+				5AEC71692A1006130020AC17 /* HTTPClient.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +166,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AE010522A1003EE003664B3 /* ContentView.swift in Sources */,
+				5AEC71682A1006030020AC17 /* RequestError.swift in Sources */,
+				5AEC716A2A1006130020AC17 /* HTTPClient.swift in Sources */,
 				5AE010502A1003EE003664B3 /* RijksmuseumApp.swift in Sources */,
+				5AEC71662A1005F30020AC17 /* Endpoint.swift in Sources */,
 				5AEC71632A1004DD0020AC17 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
