@@ -15,6 +15,15 @@
 		5AEC71662A1005F30020AC17 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71652A1005F30020AC17 /* Endpoint.swift */; };
 		5AEC71682A1006030020AC17 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71672A1006030020AC17 /* RequestError.swift */; };
 		5AEC716A2A1006130020AC17 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71692A1006130020AC17 /* HTTPClient.swift */; };
+		5AEC716D2A1007930020AC17 /* Acquisition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC716C2A1007930020AC17 /* Acquisition.swift */; };
+		5AEC716F2A10079C0020AC17 /* ArtObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC716E2A10079C0020AC17 /* ArtObject.swift */; };
+		5AEC71712A1007A50020AC17 /* Dating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71702A1007A50020AC17 /* Dating.swift */; };
+		5AEC71732A1007AE0020AC17 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71722A1007AE0020AC17 /* Item.swift */; };
+		5AEC71752A1007B50020AC17 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71742A1007B50020AC17 /* Label.swift */; };
+		5AEC71772A1007BE0020AC17 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71762A1007BE0020AC17 /* Collection.swift */; };
+		5AEC71792A1007C60020AC17 /* CollectionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71782A1007C60020AC17 /* CollectionObject.swift */; };
+		5AEC717B2A1007CE0020AC17 /* CollectionObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC717A2A1007CE0020AC17 /* CollectionObjectType.swift */; };
+		5AEC717D2A1007D70020AC17 /* WebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC717C2A1007D60020AC17 /* WebImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +36,15 @@
 		5AEC71652A1005F30020AC17 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		5AEC71672A1006030020AC17 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		5AEC71692A1006130020AC17 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		5AEC716C2A1007930020AC17 /* Acquisition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acquisition.swift; sourceTree = "<group>"; };
+		5AEC716E2A10079C0020AC17 /* ArtObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtObject.swift; sourceTree = "<group>"; };
+		5AEC71702A1007A50020AC17 /* Dating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dating.swift; sourceTree = "<group>"; };
+		5AEC71722A1007AE0020AC17 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		5AEC71742A1007B50020AC17 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		5AEC71762A1007BE0020AC17 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		5AEC71782A1007C60020AC17 /* CollectionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionObject.swift; sourceTree = "<group>"; };
+		5AEC717A2A1007CE0020AC17 /* CollectionObjectType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionObjectType.swift; sourceTree = "<group>"; };
+		5AEC717C2A1007D60020AC17 /* WebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				5AEC71642A1005E40020AC17 /* Networking */,
+				5AEC716B2A1007750020AC17 /* Model */,
 				5AEC71612A1004D00020AC17 /* Extensions */,
 				5AE0104F2A1003EE003664B3 /* RijksmuseumApp.swift */,
 				5AE010512A1003EE003664B3 /* ContentView.swift */,
@@ -93,6 +112,22 @@
 				5AEC71692A1006130020AC17 /* HTTPClient.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		5AEC716B2A1007750020AC17 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5AEC716C2A1007930020AC17 /* Acquisition.swift */,
+				5AEC716E2A10079C0020AC17 /* ArtObject.swift */,
+				5AEC71702A1007A50020AC17 /* Dating.swift */,
+				5AEC71722A1007AE0020AC17 /* Item.swift */,
+				5AEC71742A1007B50020AC17 /* Label.swift */,
+				5AEC71762A1007BE0020AC17 /* Collection.swift */,
+				5AEC71782A1007C60020AC17 /* CollectionObject.swift */,
+				5AEC717A2A1007CE0020AC17 /* CollectionObjectType.swift */,
+				5AEC717C2A1007D60020AC17 /* WebImage.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,11 +200,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AEC71732A1007AE0020AC17 /* Item.swift in Sources */,
+				5AEC716F2A10079C0020AC17 /* ArtObject.swift in Sources */,
+				5AEC717D2A1007D70020AC17 /* WebImage.swift in Sources */,
+				5AEC716D2A1007930020AC17 /* Acquisition.swift in Sources */,
+				5AEC71772A1007BE0020AC17 /* Collection.swift in Sources */,
 				5AE010522A1003EE003664B3 /* ContentView.swift in Sources */,
+				5AEC71752A1007B50020AC17 /* Label.swift in Sources */,
 				5AEC71682A1006030020AC17 /* RequestError.swift in Sources */,
 				5AEC716A2A1006130020AC17 /* HTTPClient.swift in Sources */,
+				5AEC71792A1007C60020AC17 /* CollectionObject.swift in Sources */,
 				5AE010502A1003EE003664B3 /* RijksmuseumApp.swift in Sources */,
 				5AEC71662A1005F30020AC17 /* Endpoint.swift in Sources */,
+				5AEC71712A1007A50020AC17 /* Dating.swift in Sources */,
+				5AEC717B2A1007CE0020AC17 /* CollectionObjectType.swift in Sources */,
 				5AEC71632A1004DD0020AC17 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
