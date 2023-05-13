@@ -27,6 +27,7 @@
 		5AEC71812A100A550020AC17 /* CollectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC717F2A100A550020AC17 /* CollectionService.swift */; };
 		5AEC71822A100A550020AC17 /* CollectionEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71802A100A550020AC17 /* CollectionEndpoint.swift */; };
 		5AEC718A2A100F580020AC17 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5AEC71892A100F580020AC17 /* Kingfisher */; };
+		5AEC71942A1012120020AC17 /* ItemTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71932A1012120020AC17 /* ItemTile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		5AEC717C2A1007D60020AC17 /* WebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImage.swift; sourceTree = "<group>"; };
 		5AEC717F2A100A550020AC17 /* CollectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionService.swift; sourceTree = "<group>"; };
 		5AEC71802A100A550020AC17 /* CollectionEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionEndpoint.swift; sourceTree = "<group>"; };
+		5AEC71932A1012120020AC17 /* ItemTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				5AEC71642A1005E40020AC17 /* Networking */,
 				5AEC716B2A1007750020AC17 /* Model */,
 				5AEC717E2A100A3E0020AC17 /* Service */,
+				5AEC718E2A10101F0020AC17 /* Feature */,
 				5AEC71612A1004D00020AC17 /* Extensions */,
 				5AE0104F2A1003EE003664B3 /* RijksmuseumApp.swift */,
 				5AE010512A1003EE003664B3 /* ContentView.swift */,
@@ -144,6 +147,30 @@
 				5AEC717F2A100A550020AC17 /* CollectionService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		5AEC718E2A10101F0020AC17 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				5AEC718F2A10102B0020AC17 /* ArtCollection */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		5AEC718F2A10102B0020AC17 /* ArtCollection */ = {
+			isa = PBXGroup;
+			children = (
+				5AEC71902A1010380020AC17 /* Views */,
+			);
+			path = ArtCollection;
+			sourceTree = "<group>";
+		};
+		5AEC71902A1010380020AC17 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AEC71932A1012120020AC17 /* ItemTile.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +261,7 @@
 				5AEC716A2A1006130020AC17 /* HTTPClient.swift in Sources */,
 				5AEC71792A1007C60020AC17 /* CollectionObject.swift in Sources */,
 				5AE010502A1003EE003664B3 /* RijksmuseumApp.swift in Sources */,
+				5AEC71942A1012120020AC17 /* ItemTile.swift in Sources */,
 				5AEC71662A1005F30020AC17 /* Endpoint.swift in Sources */,
 				5AEC71712A1007A50020AC17 /* Dating.swift in Sources */,
 				5AEC717B2A1007CE0020AC17 /* CollectionObjectType.swift in Sources */,
