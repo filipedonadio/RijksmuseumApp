@@ -9,7 +9,15 @@ import SwiftUI
 
 struct ArtCollectionView: View {
     var body: some View {
-        Text("ArtCollectionView")
+        NavigationStack {
+            Text("ArtCollectionView")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        LogoView()
+                    }
+                }
+        }
     }
 }
 
