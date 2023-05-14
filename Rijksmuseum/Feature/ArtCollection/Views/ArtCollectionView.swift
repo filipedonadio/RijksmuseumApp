@@ -8,15 +8,28 @@
 import SwiftUI
 
 struct ArtCollectionView: View {
+    private let columns: [GridItem] = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
     var body: some View {
         NavigationStack {
-            Text("ArtCollectionView")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        LogoView()
+            VStack {
+                MenuBar()
+                
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 8) {
+                        // TODO: Display ItemTile
                     }
                 }
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    LogoView()
+                }
+            }
         }
     }
 }

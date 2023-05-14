@@ -43,6 +43,7 @@ struct MenuBar: View {
                         }
                 }
             }
+            .padding(8)
         }
     }
     
