@@ -12,6 +12,7 @@ struct LoadingView: View {
         VStack {
             Spacer()
             ProgressView()
+                .tint(.theme.accent)
             Spacer()
         }
     }
