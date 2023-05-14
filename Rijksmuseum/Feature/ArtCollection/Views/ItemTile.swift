@@ -9,7 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct ItemTile: View {
-    let imageUrl: URL
+    let imageUrl: URL?
     let title: String
     let subtitle: String
     
