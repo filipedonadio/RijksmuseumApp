@@ -28,12 +28,15 @@ struct ItemTile: View {
             .clipped()
             
             VStack(alignment: .leading) {
-                Text(title)
-                    .font(.headline)
-                    .foregroundColor(.theme.primaryTextColor)
-                Text(subtitle)
-                    .font(.subheadline)
-                    .foregroundColor(.theme.secondaryTextColor)
+                Group {
+                    Text(title)
+                        .font(.headline)
+                        .foregroundColor(.theme.primaryTextColor)
+                    Text(subtitle)
+                        .font(.subheadline)
+                        .foregroundColor(.theme.secondaryTextColor)
+                }
+                .lineLimit(1)
             }
             .padding(8)
         }
