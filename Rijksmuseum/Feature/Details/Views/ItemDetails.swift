@@ -150,6 +150,11 @@ struct ItemDetails: View {
 
 struct ItemDetails_Previews: PreviewProvider {
     static var previews: some View {
-        ItemDetails(viewModel: ItemDetailsViewModel(objectNumber: "SK-A-1718", favoriteDataService: FavoriteDataService()))
+        ItemDetails(
+            viewModel: ItemDetailsViewModel(
+                collectionObject: CollectionObject.testData,
+                favoriteDataService: FavoriteDataService()
+            )
+        )
     }
 }

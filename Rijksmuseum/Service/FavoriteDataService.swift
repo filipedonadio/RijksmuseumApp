@@ -26,12 +26,12 @@ class FavoriteDataService: ObservableObject {
     
     // MARK: - Public
     
-    func updateFavorite(objectNumber: String) {
+    func updateFavorite(for collectionObject: CollectionObject) {
         // Check if the item is already a favorite.
-        if let entity = savedEntities.first(where: { $0.objectNumber == objectNumber }) {
+        if let entity = savedEntities.first(where: { $0.objectNumber == collectionObject.objectNumber }) {
             delete(entity: entity)
         } else {
-            add(objectNumber: objectNumber)
+            add(collectionObject)
         }
     }
     
@@ -46,9 +46,13 @@ class FavoriteDataService: ObservableObject {
         }
     }
     
-    private func add(objectNumber: String) {
+    private func add(_ collectionObject: CollectionObject) {
         let entity = FavoriteEntity(context: container.viewContext)
-        entity.objectNumber = objectNumber
+        entity.date = Date()
+        entity.imageUrl = collectionObject.webImage.url
+        entity.objectNumber = collectionObject.objectNumber
+        entity.subtitle = collectionObject.principalOrFirstMaker
+        entity.title = collectionObject.title
         applyChanges()
     }
     

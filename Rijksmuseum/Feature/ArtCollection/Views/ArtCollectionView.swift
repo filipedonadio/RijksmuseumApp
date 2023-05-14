@@ -57,7 +57,7 @@ struct ArtCollectionView: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 8) {
                 ForEach(collection.artObjects) { item in
-                    NavigationLink(value: item.objectNumber) {
+                    NavigationLink(value: item) {
                         ItemTile(
                             imageUrl: URL(string: item.webImage.url),
                             title: item.title,
@@ -67,8 +67,8 @@ struct ArtCollectionView: View {
                     }
                 }
             }
-            .navigationDestination(for: String.self) { objectNumber in
-                ItemDetails(viewModel: ItemDetailsViewModel(objectNumber: objectNumber, favoriteDataService: viewModel.favoriteDataService))
+            .navigationDestination(for: CollectionObject.self) { collectionObject in
+                ItemDetails(viewModel: ItemDetailsViewModel(collectionObject: collectionObject, favoriteDataService: viewModel.favoriteDataService))
             }
             .padding(8)
         }

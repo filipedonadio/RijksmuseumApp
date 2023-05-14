@@ -12,17 +12,17 @@ final class ItemDetailsViewModel: ObservableObject {
     @Published var state: ViewState<Item> = .empty
     @Published var isFavorite = false
     
-    let objectNumber: String
+    let collectionObject: CollectionObject
     private let collectionService = CollectionServiceImpl()
     private let favoriteDataService: FavoriteDataService
     private var cancellables = Set<AnyCancellable>()
     
     var formattedObjectNumber: String {
-        "Object number: \(objectNumber)"
+        "Object number: \(collectionObject.objectNumber)"
     }
     
-    init(objectNumber: String, favoriteDataService: FavoriteDataService) {
-        self.objectNumber = objectNumber
+    init(collectionObject: CollectionObject, favoriteDataService: FavoriteDataService) {
+        self.collectionObject = collectionObject
         self.favoriteDataService = favoriteDataService
         
         Task {
@@ -36,7 +36,7 @@ final class ItemDetailsViewModel: ObservableObject {
         state = .loading
         
         do {
-            let itemDetails = try await collectionService.fetchDetails(for: objectNumber)
+            let itemDetails = try await collectionService.fetchDetails(for: collectionObject.objectNumber)
             state = .success(elements: itemDetails.artObject)
         } catch {
             state = .error
@@ -48,12 +48,12 @@ final class ItemDetailsViewModel: ObservableObject {
     }
     
     func updateFavorite() {
-        favoriteDataService.updateFavorite(objectNumber: objectNumber)
+        favoriteDataService.updateFavorite(for: collectionObject)
     }
     
     private func addSubscribers() {
         favoriteDataService.$savedEntities.sink { [weak self] favorites in
-            let favoriteEntity = favorites.first(where: { $0.objectNumber == self?.objectNumber })
+            let favoriteEntity = favorites.first(where: { $0.objectNumber == self?.collectionObject.objectNumber })
             if favoriteEntity != nil {
                 self?.isFavorite = true
             } else {
