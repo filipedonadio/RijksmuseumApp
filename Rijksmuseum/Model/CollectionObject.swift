@@ -7,9 +7,13 @@
 
 import Foundation
 
-struct CollectionObject: Decodable {
+struct CollectionObject: Decodable, Identifiable {
     let objectNumber: String
     let title: String
     let principalOrFirstMaker: String
     let webImage: WebImage
+    
+    var id: String {
+        objectNumber
+    }
 }
