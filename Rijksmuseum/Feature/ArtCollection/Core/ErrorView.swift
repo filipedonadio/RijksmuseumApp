@@ -36,7 +36,7 @@ struct ErrorView: View {
             .foregroundColor(.white)
             .font(.body)
             .fontWeight(.bold)
-            .padding(.bottom, 32)
+            .padding(.bottom, 48)
         }
         .frame(maxWidth: .infinity)
         .background(Color.theme.backgroundElevatedColor)
