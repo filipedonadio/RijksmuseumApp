@@ -36,4 +36,7 @@ final class ItemDetailsViewModel: ObservableObject {
         }
     }
     
+    func formatMultipleInformation(_ items: [String]) -> String {
+        items.map{ String($0.capitalized) }.joined(separator: ", ")
+    }
 }
