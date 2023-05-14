@@ -222,6 +222,7 @@
 		5AEC718E2A10101F0020AC17 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				5AACC0832A10D79700044528 /* Core */,
 				5AEC718F2A10102B0020AC17 /* ArtCollection */,
 				5AACC08E2A10EF8D00044528 /* Details */,
 				5A9B83452A10D1F90099616B /* Favorites */,
@@ -232,7 +233,6 @@
 		5AEC718F2A10102B0020AC17 /* ArtCollection */ = {
 			isa = PBXGroup;
 			children = (
-				5AACC0832A10D79700044528 /* Core */,
 				5AEC71902A1010380020AC17 /* Views */,
 			);
 			path = ArtCollection;
