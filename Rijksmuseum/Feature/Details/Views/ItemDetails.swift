@@ -137,9 +137,9 @@ struct ItemDetails: View {
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button {
-                    
+                    viewModel.updateFavorite()
                 } label: {
-                    Image(systemName: "heart")
+                    Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
                         .foregroundColor(Color.theme.accent)
                 }
 
@@ -150,6 +150,6 @@ struct ItemDetails: View {
 
 struct ItemDetails_Previews: PreviewProvider {
     static var previews: some View {
-        ItemDetails(viewModel: ItemDetailsViewModel(objectNumber: "SK-A-1718"))
+        ItemDetails(viewModel: ItemDetailsViewModel(objectNumber: "SK-A-1718", favoriteDataService: FavoriteDataService()))
     }
 }

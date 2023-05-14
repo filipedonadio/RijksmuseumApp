@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ArtCollectionView: View {
-    @StateObject var viewModel = ArtCollectionViewModel()
+    @StateObject var viewModel: ArtCollectionViewModel
     
     private let columns: [GridItem] = [
         GridItem(.flexible()),
@@ -57,13 +57,14 @@ struct ArtCollectionView: View {
                         ItemTile(
                             imageUrl: URL(string: item.webImage.url),
                             title: item.title,
-                            subtitle: item.principalOrFirstMaker
+                            subtitle: item.principalOrFirstMaker,
+                            isFavorite: item.isFavorite
                         )
                     }
                 }
             }
             .navigationDestination(for: String.self) { objectNumber in
-                ItemDetails(viewModel: ItemDetailsViewModel(objectNumber: objectNumber))
+                ItemDetails(viewModel: ItemDetailsViewModel(objectNumber: objectNumber, favoriteDataService: viewModel.favoriteDataService))
             }
             .padding(8)
         }
@@ -72,6 +73,6 @@ struct ArtCollectionView: View {
 
 struct ArtCollectionView_Previews: PreviewProvider {
     static var previews: some View {
-        ArtCollectionView()
+        ArtCollectionView(viewModel: ArtCollectionViewModel(favoriteDataService: FavoriteDataService()))
     }
 }

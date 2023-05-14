@@ -12,20 +12,29 @@ struct ItemTile: View {
     let imageUrl: URL?
     let title: String
     let subtitle: String
+    let isFavorite: Bool
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            ZStack {
-                Color.clear
-                    .frame(height: 250)
+            ZStack(alignment: .bottomLeading) {
+                ZStack {
+                    Color.clear
+                        .frame(height: 250)
+                    
+                    KFImage(imageUrl)
+                        .resizable()
+                        .downsampling(size: CGSize(width: 400, height: 250))
+                        .scaledToFill()
+                        .layoutPriority(-1)
+                }
+                .clipped()
                 
-                KFImage(imageUrl)
-                    .resizable()
-                    .downsampling(size: CGSize(width: 400, height: 250))
-                    .scaledToFill()
-                    .layoutPriority(-1)
+                if isFavorite {
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.white)
+                        .padding(8)
+                }
             }
-            .clipped()
             
             VStack(alignment: .leading) {
                 Group {
@@ -50,7 +59,8 @@ struct ItemTile_Previews: PreviewProvider {
         ItemTile(
             imageUrl: URL(string: "https://lh3.googleusercontent.com/1pTfYJlLwVTifKj4PlsWPyAg4PcIVBAiVvB8sameSnmm7HRd056abNUIRq33rgry7u9t-ju-eHOnbfqQpK4q_8IwzIXZ4WgrqZW9l7U=s0")!,
             title: "Winter Landscape with Ice Skaters",
-            subtitle: "Hendrick Avercamp"
+            subtitle: "Hendrick Avercamp",
+            isFavorite: true
         )
     }
 }

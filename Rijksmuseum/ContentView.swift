@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var favoriteDataService: FavoriteDataService
+    
     var body: some View {
         TabView {
-            ArtCollectionView()
-                .tabItem {
-                    Image(systemName: "square.grid.2x2.fill")
-                    Text("Collection")
-                }
+            ArtCollectionView(viewModel: ArtCollectionViewModel(
+                favoriteDataService: favoriteDataService)
+            )
+            .tabItem {
+                Image(systemName: "square.grid.2x2.fill")
+                Text("Collection")
+            }
             FavoritesView()
                 .tabItem {
                     Image(systemName: "heart.fill")

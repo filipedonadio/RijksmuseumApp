@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct RijksmuseumApp: App {
+    @StateObject private var favoriteDataService = FavoriteDataService()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(favoriteDataService)
         }
     }
 }
