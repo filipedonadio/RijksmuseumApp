@@ -21,6 +21,7 @@ struct ItemTile: View {
                 
                 KFImage(imageUrl)
                     .resizable()
+                    .downsampling(size: CGSize(width: 400, height: 250))
                     .scaledToFill()
                     .layoutPriority(-1)
             }
