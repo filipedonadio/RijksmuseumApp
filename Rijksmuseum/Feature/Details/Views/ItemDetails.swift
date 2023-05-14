@@ -134,6 +134,17 @@ struct ItemDetails: View {
         .listStyle(.plain)
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle(viewModel.formattedObjectNumber)
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button {
+                    
+                } label: {
+                    Image(systemName: "heart")
+                        .foregroundColor(Color.theme.accent)
+                }
+
+            }
+        }
     }
 }
 
