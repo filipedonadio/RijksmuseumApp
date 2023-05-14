@@ -19,5 +19,5 @@ public enum ViewState<T> {
     case error
     
     /// The elements are loaded and ready for use.
-    case success(elements: [T])
+    case success(elements: T)
 }
