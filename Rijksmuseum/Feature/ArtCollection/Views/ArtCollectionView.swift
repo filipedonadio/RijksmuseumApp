@@ -9,26 +9,37 @@ import SwiftUI
 
 struct ArtCollectionView: View {
     @StateObject var viewModel: ArtCollectionViewModel
+    @State private var selectedType: CollectionObjectType = .painting
     
     private let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
     ]
     
+    var menuBar: some View {
+        MenuBar(selectedType: $selectedType)
+            .onChange(of: selectedType) { tappedType in
+                Task {
+                    await viewModel.fetchCollection(type: tappedType)
+                }
+            }
+    }
+    
     var body: some View {
         NavigationStack {
             Group {
+                menuBar
                 switch viewModel.state {
                 case .error:
                     ErrorView(tryAgainAction: {
                         Task {
-                            await viewModel.fetchCollection()
+                            await viewModel.fetchCollection(type: selectedType)
                         }
                     })
                 case .loading:
-                    makeCollectionStack(with: LoadingView())
+                    LoadingView()
                 case .success(let collection):
-                    makeCollectionStack(with: makeScrollView(collection: collection))
+                    makeScrollView(with: collection)
                 case .empty:
                     Color.clear
                 }
@@ -42,14 +53,7 @@ struct ArtCollectionView: View {
         }
     }
     
-    private func makeCollectionStack(with content: some View) -> some View {
-        VStack {
-            MenuBar()
-            content
-        }
-    }
-    
-    private func makeScrollView(collection: Collection) -> some View {
+    private func makeScrollView(with collection: Collection) -> some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 8) {
                 ForEach(collection.artObjects) { item in

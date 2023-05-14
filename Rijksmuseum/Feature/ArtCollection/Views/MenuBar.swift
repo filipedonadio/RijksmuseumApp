@@ -13,7 +13,7 @@ struct MenuItem: Identifiable {
 }
 
 struct MenuBar: View {
-    @State private var selectedType: CollectionObjectType = .painting
+    @Binding var selectedType: CollectionObjectType
     
     private let menuItems = [
         MenuItem(collectionType: .painting),
@@ -54,6 +54,6 @@ struct MenuBar: View {
 
 struct MenuBar_Previews: PreviewProvider {
     static var previews: some View {
-        MenuBar()
+        MenuBar(selectedType: .constant(.painting))
     }
 }

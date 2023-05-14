@@ -18,15 +18,15 @@ final class ArtCollectionViewModel: ObservableObject {
     init(favoriteDataService: FavoriteDataService) {
         self.favoriteDataService = favoriteDataService
         Task {
-            await fetchCollection()
+            await fetchCollection(type: .painting)
         }
     }
     
-    func fetchCollection() async {
+    func fetchCollection(type: CollectionObjectType) async {
         state = .loading
         
         do {
-            let collection = try await collectionService.fetch(type: .painting)
+            let collection = try await collectionService.fetch(type: type)
             
             favoriteDataService.$savedEntities.sink { [weak self] savedFavorites in
                 let elements = collection.artObjects.map { collectionObject in
