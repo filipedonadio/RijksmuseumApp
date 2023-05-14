@@ -8,34 +8,51 @@
 import SwiftUI
 
 struct ItemDetails: View {
-    let objectNumber: String
+    @StateObject var viewModel: ItemDetailsViewModel
     
     var body: some View {
-        List {
-            Section {
-                VStack(alignment: .leading) {
-                    Text("Title")
-                        .font(.footnote)
-                        .foregroundColor(.theme.secondaryTextColor)
-                    Text("Lorem ipsum dolor sit amet.")
-                        .font(.body)
-                        .foregroundColor(.theme.primaryTextColor)
+        VStack {
+            switch viewModel.state {
+            case .error:
+                ErrorView(tryAgainAction: {
+                    Task {
+                        await viewModel.fetchDetails()
+                    }
+                })
+            case .loading:
+                LoadingView()
+            case .success(let itemDetails):
+                List {
+                    Section {
+                        VStack(alignment: .leading) {
+                            if let title = itemDetails.title {
+                                Text("Title")
+                                    .font(.footnote)
+                                    .foregroundColor(.theme.secondaryTextColor)
+                                Text(title)
+                                    .font(.body)
+                                    .foregroundColor(.theme.primaryTextColor)
+                            }
+                        }
+                    } header: {
+                        Text("Identification")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(.theme.primaryTextColor)
+                    }
                 }
-            } header: {
-                Text("Identification")
-                    .font(.headline)
-                    .fontWeight(.bold)
-                    .foregroundColor(.theme.primaryTextColor)
+            case .empty:
+                Color.clear
             }
         }
         .listStyle(.plain)
         .navigationBarTitleDisplayMode(.inline)
-        .navigationTitle("Object number: \(objectNumber)")
+        .navigationTitle(viewModel.formattedObjectNumber)
     }
 }
 
 struct ItemDetails_Previews: PreviewProvider {
     static var previews: some View {
-        ItemDetails(objectNumber: "SK-A-1718")
+        ItemDetails(viewModel: ItemDetailsViewModel(objectNumber: "SK-A-1718"))
     }
 }

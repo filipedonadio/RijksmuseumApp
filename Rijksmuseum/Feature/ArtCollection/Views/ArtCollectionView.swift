@@ -63,8 +63,7 @@ struct ArtCollectionView: View {
                 }
             }
             .navigationDestination(for: String.self) { objectNumber in
-                // TODO: Implement art details screen.
-                Text(objectNumber)
+                ItemDetails(viewModel: ItemDetailsViewModel(objectNumber: objectNumber))
             }
             .padding(8)
         }
