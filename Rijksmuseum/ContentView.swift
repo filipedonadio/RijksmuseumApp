@@ -19,11 +19,13 @@ struct ContentView: View {
                 Image(systemName: "square.grid.2x2.fill")
                 Text("Collection")
             }
-            FavoritesView()
-                .tabItem {
-                    Image(systemName: "heart.fill")
-                    Text("Favorites")
-                }
+            FavoritesView(viewModel: FavoritesViewModel(
+                favoriteDataService: favoriteDataService)
+            )
+            .tabItem {
+                Image(systemName: "heart.fill")
+                Text("Favorites")
+            }
         }
     }
 }
