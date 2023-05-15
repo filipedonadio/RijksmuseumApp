@@ -10,6 +10,7 @@ import Combine
 @MainActor
 final class ArtCollectionViewModel: ObservableObject {
     @Published var state: ViewState<Collection> = .empty
+    @Published var collectionFromAPI: [CollectionObject] = []
     
     let favoriteDataService: FavoriteDataService
     private let collectionService = CollectionServiceImpl()
@@ -20,6 +21,8 @@ final class ArtCollectionViewModel: ObservableObject {
         Task {
             await fetchCollection(type: .painting)
         }
+        
+        addSubscribers()
     }
     
     func fetchCollection(type: CollectionObjectType) async {
@@ -27,19 +30,26 @@ final class ArtCollectionViewModel: ObservableObject {
         
         do {
             let collection = try await collectionService.fetch(type: type)
-            
-            favoriteDataService.$savedEntities.sink { [weak self] savedFavorites in
-                let elements = collection.artObjects.map { collectionObject in
-                    if savedFavorites.contains(where: { $0.objectNumber == collectionObject.objectNumber }) {
+            collectionFromAPI = collection.artObjects
+        } catch {
+            state = .error
+        }
+    }
+    
+    private func addSubscribers() {
+        $collectionFromAPI
+            .combineLatest(favoriteDataService.$savedEntities)
+            .map { (collectionObjects, favoriteEntities) -> [CollectionObject] in
+                collectionObjects.map { collectionObject in
+                    if favoriteEntities.first(where: { $0.objectNumber == collectionObject.objectNumber }) != nil {
                         return collectionObject.updateFavorite()
                     }
                     return collectionObject
                 }
-                self?.state = .success(elements: Collection(artObjects: elements))
+            }
+            .sink { [weak self] returnedObjects in
+                self?.state = .success(elements: Collection(artObjects: returnedObjects))
             }
             .store(in: &cancellables)
-        } catch {
-            state = .error
-        }
     }
 }
