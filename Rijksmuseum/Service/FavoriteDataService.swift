@@ -39,6 +39,9 @@ class FavoriteDataService: ObservableObject {
     
     private func getFavorites() {
         let request = NSFetchRequest<FavoriteEntity>(entityName: entityName)
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: false)
+        request.sortDescriptors = [sortDescriptor]
+        
         do {
             savedEntities = try container.viewContext.fetch(request)
         } catch {
