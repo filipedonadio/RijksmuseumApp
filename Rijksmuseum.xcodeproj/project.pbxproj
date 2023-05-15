@@ -20,6 +20,9 @@
 		5AACC0932A10F1D200044528 /* ItemDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AACC0922A10F1D200044528 /* ItemDetailsViewModel.swift */; };
 		5AACC0992A11049A00044528 /* FavoriteContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AACC0972A11049A00044528 /* FavoriteContainer.xcdatamodeld */; };
 		5AACC09B2A1104F200044528 /* FavoriteDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AACC09A2A1104F200044528 /* FavoriteDataService.swift */; };
+		5AC8D7DF2A12530700538EEB /* Rijksmuseum_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC8D7DE2A12530700538EEB /* Rijksmuseum_Tests.swift */; };
+		5AC8D7E82A12536100538EEB /* ItemDetailsViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC8D7E72A12536100538EEB /* ItemDetailsViewModel_Tests.swift */; };
+		5AC8D7EA2A126A6700538EEB /* CollectionObject_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC8D7E92A126A6700538EEB /* CollectionObject_Tests.swift */; };
 		5AE010502A1003EE003664B3 /* RijksmuseumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE0104F2A1003EE003664B3 /* RijksmuseumApp.swift */; };
 		5AE010522A1003EE003664B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE010512A1003EE003664B3 /* ContentView.swift */; };
 		5AE010542A1003F0003664B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE010532A1003F0003664B3 /* Assets.xcassets */; };
@@ -44,6 +47,16 @@
 		5AEC71982A101BAE0020AC17 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC71972A101BAE0020AC17 /* MenuBar.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5AC8D7E02A12530700538EEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AE010442A1003EE003664B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AE0104B2A1003EE003664B3;
+			remoteInfo = Rijksmuseum;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		5A2CA58D2A12066300225C76 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		5A9B83432A10D1E30099616B /* ArtCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCollectionView.swift; sourceTree = "<group>"; };
@@ -58,6 +71,10 @@
 		5AACC0922A10F1D200044528 /* ItemDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewModel.swift; sourceTree = "<group>"; };
 		5AACC0982A11049A00044528 /* FavoriteContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteContainer.xcdatamodel; sourceTree = "<group>"; };
 		5AACC09A2A1104F200044528 /* FavoriteDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDataService.swift; sourceTree = "<group>"; };
+		5AC8D7DC2A12530700538EEB /* Rijksmuseum_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Rijksmuseum_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AC8D7DE2A12530700538EEB /* Rijksmuseum_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rijksmuseum_Tests.swift; sourceTree = "<group>"; };
+		5AC8D7E72A12536100538EEB /* ItemDetailsViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewModel_Tests.swift; sourceTree = "<group>"; };
+		5AC8D7E92A126A6700538EEB /* CollectionObject_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionObject_Tests.swift; sourceTree = "<group>"; };
 		5AE0104C2A1003EE003664B3 /* Rijksmuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rijksmuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE0104F2A1003EE003664B3 /* RijksmuseumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RijksmuseumApp.swift; sourceTree = "<group>"; };
 		5AE010512A1003EE003664B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +100,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5AC8D7D92A12530700538EEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5AE010492A1003EE003664B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,10 +164,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		5AC8D7DD2A12530700538EEB /* Rijksmuseum_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5AC8D7DE2A12530700538EEB /* Rijksmuseum_Tests.swift */,
+				5AC8D7E72A12536100538EEB /* ItemDetailsViewModel_Tests.swift */,
+				5AC8D7E92A126A6700538EEB /* CollectionObject_Tests.swift */,
+			);
+			path = Rijksmuseum_Tests;
+			sourceTree = "<group>";
+		};
 		5AE010432A1003EE003664B3 = {
 			isa = PBXGroup;
 			children = (
 				5AE0104E2A1003EE003664B3 /* Rijksmuseum */,
+				5AC8D7DD2A12530700538EEB /* Rijksmuseum_Tests */,
 				5AE0104D2A1003EE003664B3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				5AE0104C2A1003EE003664B3 /* Rijksmuseum.app */,
+				5AC8D7DC2A12530700538EEB /* Rijksmuseum_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,6 +294,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5AC8D7DB2A12530700538EEB /* Rijksmuseum_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AC8D7E42A12530700538EEB /* Build configuration list for PBXNativeTarget "Rijksmuseum_Tests" */;
+			buildPhases = (
+				5AC8D7D82A12530700538EEB /* Sources */,
+				5AC8D7D92A12530700538EEB /* Frameworks */,
+				5AC8D7DA2A12530700538EEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AC8D7E12A12530700538EEB /* PBXTargetDependency */,
+			);
+			name = Rijksmuseum_Tests;
+			productName = Rijksmuseum_Tests;
+			productReference = 5AC8D7DC2A12530700538EEB /* Rijksmuseum_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5AE0104B2A1003EE003664B3 /* Rijksmuseum */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AE0105A2A1003F0003664B3 /* Build configuration list for PBXNativeTarget "Rijksmuseum" */;
@@ -288,6 +342,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					5AC8D7DB2A12530700538EEB = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 5AE0104B2A1003EE003664B3;
+					};
 					5AE0104B2A1003EE003664B3 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -310,11 +368,19 @@
 			projectRoot = "";
 			targets = (
 				5AE0104B2A1003EE003664B3 /* Rijksmuseum */,
+				5AC8D7DB2A12530700538EEB /* Rijksmuseum_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5AC8D7DA2A12530700538EEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5AE0104A2A1003EE003664B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -327,6 +393,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5AC8D7D82A12530700538EEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AC8D7E82A12536100538EEB /* ItemDetailsViewModel_Tests.swift in Sources */,
+				5AC8D7EA2A126A6700538EEB /* CollectionObject_Tests.swift in Sources */,
+				5AC8D7DF2A12530700538EEB /* Rijksmuseum_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5AE010482A1003EE003664B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -368,7 +444,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5AC8D7E12A12530700538EEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AE0104B2A1003EE003664B3 /* Rijksmuseum */;
+			targetProxy = 5AC8D7E02A12530700538EEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		5AC8D7E22A12530700538EEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C49U28DLR9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.filipedonadio.Rijksmuseum-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rijksmuseum.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Rijksmuseum";
+			};
+			name = Debug;
+		};
+		5AC8D7E32A12530700538EEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C49U28DLR9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.filipedonadio.Rijksmuseum-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rijksmuseum.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Rijksmuseum";
+			};
+			name = Release;
+		};
 		5AE010582A1003F0003664B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -544,6 +664,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5AC8D7E42A12530700538EEB /* Build configuration list for PBXNativeTarget "Rijksmuseum_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AC8D7E22A12530700538EEB /* Debug */,
+				5AC8D7E32A12530700538EEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5AE010472A1003EE003664B3 /* Build configuration list for PBXProject "Rijksmuseum" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
