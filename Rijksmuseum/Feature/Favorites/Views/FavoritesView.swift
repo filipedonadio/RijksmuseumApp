@@ -10,11 +10,6 @@ import SwiftUI
 struct FavoritesView: View {
     @StateObject var viewModel: FavoritesViewModel
     
-    private let columns: [GridItem] = [
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
-    
     var body: some View {
         NavigationStack {
             Group {
@@ -34,7 +29,7 @@ struct FavoritesView: View {
                     .padding(16)
                 } else {
                     ScrollView {
-                        LazyVGrid(columns: columns, spacing: 8) {
+                        CollectionGrid {
                             ForEach(viewModel.collectionObjects) { item in
                                 NavigationLink(value: item) {
                                     ItemTile(
@@ -46,7 +41,6 @@ struct FavoritesView: View {
                                 }
                             }
                         }
-                        .padding(8)
                     }
                 }
             }

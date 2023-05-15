@@ -11,11 +11,6 @@ struct ArtCollectionView: View {
     @StateObject var viewModel: ArtCollectionViewModel
     @State private var selectedType: CollectionObjectType = .painting
     
-    private let columns: [GridItem] = [
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
-    
     var menuBar: some View {
         MenuBar(selectedType: $selectedType)
             .onChange(of: selectedType) { tappedType in
@@ -56,7 +51,7 @@ struct ArtCollectionView: View {
     
     private func makeScrollView(with collection: Collection) -> some View {
         ScrollView {
-            LazyVGrid(columns: columns, spacing: 8) {
+            CollectionGrid {
                 ForEach(collection.artObjects) { item in
                     NavigationLink(value: item) {
                         ItemTile(
@@ -76,7 +71,6 @@ struct ArtCollectionView: View {
             .navigationDestination(for: CollectionObject.self) { collectionObject in
                 ItemDetails(viewModel: ItemDetailsViewModel(collectionObject: collectionObject, favoriteDataService: viewModel.favoriteDataService))
             }
-            .padding(8)
             
             if viewModel.isLoadingPage {
                 ProgressView()
