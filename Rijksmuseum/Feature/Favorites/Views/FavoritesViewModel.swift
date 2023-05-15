@@ -29,7 +29,8 @@ final class FavoritesViewModel: ObservableObject {
                     objectNumber: objectNumber,
                     title: title,
                     principalOrFirstMaker: subtitle,
-                    webImage: WebImage(url: imageUrl)
+                    webImage: WebImage(url: imageUrl),
+                    isFavorite: true
                 )
             }
             
