@@ -26,6 +26,7 @@ struct ContentView: View {
                 Image(systemName: "heart.fill")
                 Text("Favorites")
             }
+            .badge(favoriteDataService.savedEntities.count)
         }
     }
 }
