@@ -9,6 +9,7 @@ As an art and history lover, I decided to make this iOS app about the Rijksmuseu
 # Features
 
 - Browse the art collection navigating by the type of object
+- Support infinite scroll pagination
 - Tap an art object to see details such as artist, size, material, measurement, and more
 - Mark an object as a favorite
 - Browse through all previously favorited objects
