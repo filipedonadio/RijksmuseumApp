@@ -121,18 +121,10 @@
 		5A9B83452A10D1F90099616B /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				5A9B83462A10D2050099616B /* Views */,
-			);
-			path = Favorites;
-			sourceTree = "<group>";
-		};
-		5A9B83462A10D2050099616B /* Views */ = {
-			isa = PBXGroup;
-			children = (
 				5A9B83472A10D20E0099616B /* FavoritesView.swift */,
 				5A2CA58D2A12066300225C76 /* FavoritesViewModel.swift */,
 			);
-			path = Views;
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 		5AACC0832A10D79700044528 /* Core */ = {
@@ -150,18 +142,10 @@
 		5AACC08E2A10EF8D00044528 /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				5AACC08F2A10EF9F00044528 /* Views */,
-			);
-			path = Details;
-			sourceTree = "<group>";
-		};
-		5AACC08F2A10EF9F00044528 /* Views */ = {
-			isa = PBXGroup;
-			children = (
 				5AACC0902A10EFAF00044528 /* ItemDetails.swift */,
 				5AACC0922A10F1D200044528 /* ItemDetailsViewModel.swift */,
 			);
-			path = Views;
+			path = Details;
 			sourceTree = "<group>";
 		};
 		5AC8D7DD2A12530700538EEB /* Rijksmuseum_Tests */ = {
@@ -275,20 +259,12 @@
 		5AEC718F2A10102B0020AC17 /* ArtCollection */ = {
 			isa = PBXGroup;
 			children = (
-				5AEC71902A1010380020AC17 /* Views */,
-			);
-			path = ArtCollection;
-			sourceTree = "<group>";
-		};
-		5AEC71902A1010380020AC17 /* Views */ = {
-			isa = PBXGroup;
-			children = (
 				5AEC71932A1012120020AC17 /* ItemTile.swift */,
 				5AEC71972A101BAE0020AC17 /* MenuBar.swift */,
 				5A9B83432A10D1E30099616B /* ArtCollectionView.swift */,
 				5AACC08C2A10DDDF00044528 /* ArtCollectionViewModel.swift */,
 			);
-			path = Views;
+			path = ArtCollection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
