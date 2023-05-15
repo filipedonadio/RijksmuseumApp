@@ -19,6 +19,7 @@ struct ArtCollectionView: View {
     var menuBar: some View {
         MenuBar(selectedType: $selectedType)
             .onChange(of: selectedType) { tappedType in
+                viewModel.currentPage = 1
                 Task {
                     await viewModel.fetchCollection(type: tappedType)
                 }
@@ -64,6 +65,11 @@ struct ArtCollectionView: View {
                             subtitle: item.principalOrFirstMaker,
                             isFavorite: item.isFavorite
                         )
+                        .onAppear {
+                            Task {
+                                await viewModel.loadMoreItemsIfNeeded(currentObject: item, selectedType: selectedType)
+                            }
+                        }
                     }
                 }
             }
@@ -71,6 +77,11 @@ struct ArtCollectionView: View {
                 ItemDetails(viewModel: ItemDetailsViewModel(collectionObject: collectionObject, favoriteDataService: viewModel.favoriteDataService))
             }
             .padding(8)
+            
+            if viewModel.isLoadingPage {
+                ProgressView()
+                    .tint(Color.theme.secondaryTextColor)
+            }
         }
     }
 }
