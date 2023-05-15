@@ -15,7 +15,6 @@ final class ArtCollectionViewModel: ObservableObject {
     
     let favoriteDataService: FavoriteDataService
     var currentPage = 1
-    private var canLoadMorePages = true
     private var collectionObjects: [CollectionObject] = []
     private let collectionService = CollectionServiceImpl()
     private var cancellables = Set<AnyCancellable>()
@@ -48,15 +47,19 @@ final class ArtCollectionViewModel: ObservableObject {
     }
     
     private func loadMoreContent(selectedType: CollectionObjectType) async {
-        guard !isLoadingPage && canLoadMorePages else { return }
+        guard !isLoadingPage else { return }
 
         isLoadingPage = true
         currentPage += 1
         
         do {
             let collection = try await collectionService.fetch(type: selectedType, page: currentPage)
-            collectionFromAPI.append(contentsOf: collection.artObjects)
-            canLoadMorePages = !collection.artObjects.isEmpty
+            if collection.artObjects.isEmpty && currentPage > 1 {
+                currentPage -= 1
+            } else {
+                collectionFromAPI.append(contentsOf: collection.artObjects)
+            }
+            
             isLoadingPage = false
         } catch {
             state = .error
