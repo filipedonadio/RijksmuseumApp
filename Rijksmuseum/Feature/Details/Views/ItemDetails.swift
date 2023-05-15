@@ -75,7 +75,7 @@ struct ItemDetails: View {
                                 Text("Artist")
                                     .font(.footnote)
                                     .foregroundColor(.theme.secondaryTextColor)
-                                Text(maker)
+                                Text(maker.isEmpty ? "N/A" : maker)
                                     .font(.body)
                                     .foregroundColor(.theme.primaryTextColor)
                             }
